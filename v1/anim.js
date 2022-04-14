@@ -15,12 +15,16 @@ class box{
      this.box.style.left = this.x + "px";
    }
 
+   stop(){
+       this.askstop = true;
+   }
    reset(){
        this.x = 1;
        this.y = 1;
        this.incx = 1;
        this.incy = 1;
        this.maxloop = 10;
+       this.askstop = false;
        this.draw();
    }
 
@@ -49,6 +53,7 @@ class box{
    }
 
    okToContinue(){
+    if(this.askstop) return false;
     if(this.maxloop > 0) return true;
     return false;
    }

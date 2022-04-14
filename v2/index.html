@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="main.css">
+        <script  type="text/javascript" src="anim.js"> </script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="boxr"></div>
+            <div id="boxg"></div>
+            <div id="boxb"></div>
+            <div id="boxw"></div>
+        </div>
+
+
+        <script rel="text/javascript">
+            var boxr = new Box("boxr",1,1);
+            var boxg = new Box("boxg",770,1);
+            var boxb = new Box("boxb",1,570);
+            var boxw = new Box("boxw",770,570);
+            var ani = new Animate();
+            ani.add(boxr);
+            ani.add(boxg);
+            ani.add(boxb);
+            ani.add(boxw);
+        </script>
+       
+        <br />
+        <button class="reset" onclick="ani.reset.call(ani)">Reset</button>
+        <button class="stop" onclick="ani.stop.call(ani)">Stop</button>
+        <button class="Ani5" onclick="ani.action.call(ani)">Go</button>
+    </body>
+</html>
