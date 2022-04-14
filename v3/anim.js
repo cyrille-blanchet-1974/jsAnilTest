@@ -9,8 +9,8 @@ class Box{
       this.box.height = 30 + "px";      
       this.maxx = 770;
       this.maxy = 570;
-      this.minx = 30;
-      this.miny = 30;
+      this.minx = 1;
+      this.miny = 1;
       this.startx=startx;
       this.starty=starty;
       this.speed=speed;
@@ -30,29 +30,23 @@ class Box{
    }
 
    move(boxes){
-       var myself=this;
-    boxes.forEach( function(item, index, array) {
-         if(myself.bing(item)){
+    var myself=this;
+    var changed = false;
+    boxes.forEach( function(item, index, array) {    
+         if(!changed && myself.bing(item)){
             //reverse
             myself.incx = -myself.incx;
             myself.incy = -myself.incy;    
+            changed = true;
          } 
         });
-
-    if( this.x > this.maxx){
+    
+    if(!changed && (this.x > this.maxx || this.x < this.minx) ){
         this.incx = -this.incx;
         console.log('Change X direction');
     }
-    if( this.x < this.minx){
-        this.incx = -this.incx;
-        console.log('Change X direction');
-    }
-    if(this.y > this.maxy){
+    if(!changed && (this.y > this.maxy || this.y < this.miny)){
         this.incy = -this.incy;
-        console.log('Change Y direction');
-    }
-    if(this.y < this.miny){
-        this.incy = this.incy;
         console.log('Change Y direction');
     }
     this.x += this.incx;
