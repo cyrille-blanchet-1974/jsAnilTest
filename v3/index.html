@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="main.css">
+        <script  type="text/javascript" src="anim.js"> </script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="boxred"></div>
+            <div id="boxgreen"></div>
+            <div id="boxblue"></div>
+            <div id="boxwhite"></div>
+            <div id="boxblack"></div>
+            <div id="boxpink"></div>
+            <div id="boxyellow"></div>
+            <div id="boxyellowgreen"></div>
+            <div id="boxorange"></div>
+        </div>
+
+
+        <script rel="text/javascript">
+            var box1= new Box("boxred",1,1,1);
+            var box2 = new Box("boxgreen",770,1,2);
+            var box3 = new Box("boxblue",1,570,3);
+            var box4 = new Box("boxwhite",770,570,2);
+
+            var box5 = new Box("boxblack",381,1,1);
+            var box6 = new Box("boxpink",381,570,2);
+            var box7 = new Box("boxyellow",1,285,3);
+            var box8 = new Box("boxyellowgreen",770,285,4);
+
+            var box9 = new Box("boxorange",381,285,5);
+
+            var ani = new Animate();
+            ani.add(box1);
+            ani.add(box2);
+            ani.add(box3);
+            ani.add(box4);
+            ani.add(box5);
+            ani.add(box6);
+            ani.add(box7);
+            ani.add(box8);
+            ani.add(box9);
+
+        </script>
+       
+        <br />
+        <button class="reset" onclick="ani.reset.call(ani)">Reset</button>
+        <button class="stop" onclick="ani.stop.call(ani)">Stop</button>
+        <button class="Animate" onclick="ani.action.call(ani)">Go</button>
+    </body>
+</html>
