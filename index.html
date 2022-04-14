@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="main.css">
+        <script  type="text/javascript" src="anim.js"> </script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="box"></div>
+        </div>
+
+
+        <script rel="text/javascript">
+            var box2 = new box();
+        </script>
+       
+        <br />
+        <button class="reset" onclick="box2.reset.call(box2)">Reset</button>
+        <button class="Ani1" onclick="box2.ani1.call(box2)">Manual</button>
+        <button class="Ani2" onclick="box2.ani2.call(box2)">Not visible</button>
+        <button class="Ani3" onclick="box2.ani3.call(box2)">Not sync</button>
+        <button class="Ani4" onclick="box2.ani4.call(box2)">Not smooth</button>
+        <button class="Ani5" onclick="box2.ani5.call(box2)">Good</button>
+    </body>
+</html>
