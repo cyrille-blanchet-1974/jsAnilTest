@@ -1,0 +1,57 @@
+#container {
+  position: relative;
+  background: purple;
+  width: 800px;
+  height: 600px;
+}
+
+.box {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  bottom: 0px;
+}
+
+.boxred {
+  background: red;
+}
+
+.boxgreen {
+  background: green;
+}
+
+.boxblue {
+  background: blue;
+}
+
+.boxwhite {
+  background: white;
+}
+
+.boxblack {
+  background: black;
+}
+
+.boxpink {
+  background: pink;
+}
+
+.boxyellow {
+  background: yellow;
+}
+
+.boxyellowgreen {
+  background: yellowgreen;
+}
+
+.boxorange {
+  background: orange;
+}
+
+.boxgrey {
+  background: grey;
+}
+
+.boxbrown {
+  background: brown;
+}
