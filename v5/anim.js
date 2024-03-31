@@ -2,11 +2,11 @@ class Box {
     constructor(divobj, startx, starty, speedx, speedy) {
         this.container = document.getElementById("container");
         var containerwidth = 800;
-        var containerheight = 600;
+        var containerheight = 800;
         this.container.width = containerwidth + "px";
         this.container.height = containerheight + "px";
         this.box = document.getElementById(divobj);
-        this.boxside = 15;
+        this.boxside = 45;
         this.box.width = this.boxside + "px";
         this.box.height = this.boxside + "px";
         this.maxx = containerwidth - this.boxside;
